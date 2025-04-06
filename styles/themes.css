@@ -5,30 +5,6 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.page.theme-light {
-  --border-color: #000000;
-  --text-color: #000000;
-  --bg-color: #FFFFFF;
-  --like-color: #FF0000;
-  --bg-line-color: #808080;
-  --heart-icon-border: #000000;
-  --heart-icon-fill: #FF0000;
-  --heart-icon-bg: #ffffff;
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not(.theme-light) {
-    --border-color: #000000;
-    --text-color: #000000;
-    --bg-color: #FFFFFF;
-    --like-color: #FF0000;
-    --bg-line-color: #808080;
-    --heart-icon-border: #000000;
-    --heart-icon-fill: #FF0000;
-    --heart-icon-bg: #ffffff;
-  }
-}
-
 :root.page.theme-dark {
   --border-color: #00CC14;
   --text-color: #00CC14;
@@ -50,6 +26,30 @@
     --heart-icon-border: #00CC14;
     --heart-icon-fill: #00CC14;
     --heart-icon-bg: #000000;
+  }
+}
+
+.page.theme-light {
+  --border-color: #000000;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --like-color: #FF0000;
+  --bg-line-color: #808080;
+  --heart-icon-border: #000000;
+  --heart-icon-fill: #FF0000;
+  --heart-icon-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-light) {
+    --border-color: #000000;
+    --text-color: #000000;
+    --bg-color: #FFFFFF;
+    --like-color: #FF0000;
+    --bg-line-color: #808080;
+    --heart-icon-border: #000000;
+    --heart-icon-fill: #FF0000;
+    --heart-icon-bg: #ffffff;
   }
 }
 
