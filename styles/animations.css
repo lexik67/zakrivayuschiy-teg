@@ -12,3 +12,70 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* анимация при фокусе пункта темы - появляется подчеркивание */
+  .theme-menu__button:focus-visible::after {
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* анимация при наведении на пункт темы - плавно меняется прозрачность */
+  .theme-menu__button:hover {
+    transition: opacity 0.3s ease;
+  }
+  
+  /* анимация возле активного пункта темы - влево вправо  */
+  .theme-menu__item button:disabled::before {
+    top: 50%;
+    animation: menu-marker 0.8s ease-in-out infinite;
+  }
+  
+  @keyframes menu-marker {
+    0% {
+      transform: translateY(-50%) translateX(0);
+    }
+    50% {
+      transform: translateY(-50%) translateX(0.25rem);
+    }
+    100% {
+      transform: translateY(-50%) translateX(0);
+    }
+  }
+  
+  /* анимация кнопки сердца */
+  .card__icon-button.like-icon {
+    animation: heart-beat 1.2s ease-in-out infinite;
+  }
+  
+  .card__icon-button.like-icon:hover {
+    animation-play-state: running;
+  }
+  
+  @keyframes heart-beat {
+    0% {
+      transform: scale(1);
+    }
+  
+    20% {
+      transform: scale(1);
+    }
+  
+    40% {
+      transform: scale(1);
+    }
+  
+    60% {
+      transform: scale(1.2);
+    }
+  
+    80% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+}
