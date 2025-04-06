@@ -79,33 +79,94 @@
   }
   
   /* анимация кнопки сердца */
-  .card__icon-button.like-icon {
-    animation: heart-beat 1.2s ease-in-out infinite;
+
+  /* исходное состояние */
+
+  /* контур */
+  .like-icon .contour {
+    fill: var(--heart-icon-border);
   }
-  
-  .card__icon-button.like-icon:hover {
-    animation-play-state: running;
+    /* основное тело */
+  .like-icon .main-body {
+    fill: var(--bg-color);
   }
-  
+
+  /* серцевина */
+  .like-icon .core {
+    fill: var(--bg-color);
+  }
+
+  /* искры */
+  .like-icon .sparks {
+    opacity: 0;
+  }
+
+  /* focus */
+  .card__icon-button:focus-visible {
+    outline: none;
+  }
+
+  /* hover */
+
+  .card__icon-button .like-icon .core {
+    transition: fill 0.03s linear;
+  }
+
+  .card__icon-button:hover .like-icon .core {
+    fill: var(--heart-icon-border);
+    transition: fill 0.3s linear;
+  }
+
+  .card__icon-button .like-icon .main-body  {
+    transition: fill 0.03s linear;
+  }
+
+  .card__icon-button:hover .like-icon .main-body  {
+    fill: var(--heart-icon-border);
+    transition: fill 0.03s 0.05s linear;
+  }
+
+  /* active */
+
+  .card__icon-button:active .like-icon .core {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.03s linear;
+  }
+
+  .card__icon-button:active .like-icon .main-body {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.03s 0.05s linear;
+  }
+
+  /* клик по иконке */
+
+  .like-icon.is-liked .core {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.03s linear;
+  }
+
+  .like-icon.is-liked .main-body {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.03s linear;
+  }
+
+  .like-icon.is-liked .contour {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.03s 0.06s linear;
+  }
+
+  .like-icon.is-liked .heart {
+    transform-origin: center;
+    animation: heart-beat 0.3s 0.1s ease-in-out;
+  }
+
   @keyframes heart-beat {
     0% {
       transform: scale(1);
     }
   
-    20% {
-      transform: scale(1);
-    }
-  
-    40% {
-      transform: scale(1);
-    }
-  
-    60% {
-      transform: scale(1.2);
-    }
-  
-    80% {
-      transform: scale(1);
+    50% {
+      transform: scale(1.5);
     }
   
     100% {
@@ -113,5 +174,24 @@
     }
   }
 
+  .like-icon.is-liked .sparks {
+    fill: var(--heart-icon-fill);
+    animation: heart-sparks 0.3s 0.3s ease-in-out;
+  }
 
+  @keyframes heart-sparks {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* снятие активности */
+  .like-icon {
+    transition: fill 0.1s linear;
+  }
 }
+
