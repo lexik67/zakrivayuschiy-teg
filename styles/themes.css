@@ -4,3 +4,55 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.page.theme-light {
+  --border-color: #000000;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --like-color: #FF0000;
+  --bg-line-color: #808080;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-light) {
+    --border-color: #000000;
+    --text-color: #000000;
+    --bg-color: #FFFFFF;
+    --like-color: #FF0000;
+    --bg-line-color: #808080;
+  }
+}
+
+:root.page.theme-dark {
+  --border-color: #00CC14;
+  --text-color: #00CC14;
+  --bg-color: #000000;
+  --like-color: #FF0000;
+  --bg-line-color: #00660A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-dark) {
+    --border-color: #00CC14;
+    --text-color: #00CC14;
+    --bg-color: #000000;
+    --like-color: #FF0000;
+    --bg-line-color: #00660A;
+  }
+}
+
+.page.theme-light .card__title {
+  font-weight: 700;
+}
+
+.page.theme-light .card__paragraph {
+  font-weight: 400;
+}
+
+.page.theme-dark .card__title {
+  font-weight: 785;
+}
+
+.page.theme-dark .card__paragraph {
+  font-weight: 485;
+}
