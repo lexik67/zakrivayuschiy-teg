@@ -163,8 +163,8 @@
 }
 
 @media (width <=375px) {
-  .card__paragraph:not(:last-child) {
-    padding-block-end: 27px;
+  .card__paragraph {
+    padding-inline-end: 25px;
   }
 }
 
@@ -244,14 +244,9 @@
   z-index: 2;
 }
 
-.card__icon-button {
+.card__icon-button > svg {
   width: 38px;
   height: 38px;
-}
-
-.card__icon-button > svg {
-  width: 100%;
-  height: 100%;
 }
 
 .button.button_icon_xl {
