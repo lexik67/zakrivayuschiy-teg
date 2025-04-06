@@ -10,10 +10,10 @@
   --text-color: #00CC14;
   --bg-color: #000000;
   --like-color: #FF0000;
-  --bg-line-color: #00660A;
   --heart-icon-border: #00CC14;
   --heart-icon-fill: #00CC14;
   --heart-icon-bg: #000000;
+  --bg-pattern: url(../svg/pattern-dark.svg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,10 +22,10 @@
     --text-color: #00CC14;
     --bg-color: #000000;
     --like-color: #FF0000;
-    --bg-line-color: #00660A;
     --heart-icon-border: #00CC14;
     --heart-icon-fill: #00CC14;
     --heart-icon-bg: #000000;
+    --bg-pattern: url(../svg/pattern-dark.svg);
   }
 }
 
@@ -34,10 +34,10 @@
   --text-color: #000000;
   --bg-color: #FFFFFF;
   --like-color: #FF0000;
-  --bg-line-color: #808080;
   --heart-icon-border: #000000;
   --heart-icon-fill: #FF0000;
   --heart-icon-bg: #ffffff;
+  --bg-pattern: url(../svg/pattern-light.svg);
 }
 
 @media (prefers-color-scheme: light) {
@@ -46,10 +46,10 @@
     --text-color: #000000;
     --bg-color: #FFFFFF;
     --like-color: #FF0000;
-    --bg-line-color: #808080;
     --heart-icon-border: #000000;
     --heart-icon-fill: #FF0000;
     --heart-icon-bg: #ffffff;
+    --bg-pattern: url(../svg/pattern-light.svg);
   }
 }
 

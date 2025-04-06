@@ -6,8 +6,8 @@
   --text-color: #000000;
   --bg-color: #FFFFFF;
   --like-color: #FF0000;
-  --bg-line-color: #808080;
   --heart-icon-border: #000000;
   --heart-icon-fill: #FF0000;
   --heart-icon-bg: #ffffff;
+  --bg-pattern: url(../svg/pattern-light.svg);
 }

@@ -14,6 +14,15 @@
 
 */
 
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg-pattern);
+  background-repeat: repeat;
+  background-size: 4px 4px;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -23,19 +32,6 @@
   background-color: var(--bg-color);
 }
 
-.page-bg-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
-.page-bg-svg {
-  width: 100%;
-  height: 100%;
-}
 
 /* 1 - шапка сайта */
 
@@ -177,9 +173,10 @@
 .content__footer {
   display: flex;
   justify-content: center;
-  margin-block-start: 50px;
-  margin-block-end: 100px;
+  padding-block-start: 50px;
+  padding-block-end: 100px;
   color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 /* контент - стилизация кнопок */
