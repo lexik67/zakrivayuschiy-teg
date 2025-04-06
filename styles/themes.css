@@ -54,17 +54,17 @@
 }
 
 .page.theme-light .card__title {
-  font-weight: 700;
+  font-variation-settings: "wght" 785, "wght" 700;
 }
 
 .page.theme-light .card__paragraph {
-  font-weight: 400;
+  font-variation-settings: "wght" 485, "wght" 400;
 }
 
 .page.theme-dark .card__title {
-  font-weight: 785;
+  font-variation-settings: "wght" 785, "wght" 700;
 }
 
 .page.theme-dark .card__paragraph {
-  font-weight: 485;
+  font-variation-settings: "wght" 485, "wght" 400;
 }
