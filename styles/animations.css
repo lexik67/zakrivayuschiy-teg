@@ -43,6 +43,40 @@
       transform: translateY(-50%) translateX(0);
     }
   }
+
+  /* анимация кнопок like и сохранить на память и др */
+  .button:not(.card__icon-button)::after {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .button:not(.card__icon-button):hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  /* анимация - текст кнопки */
+  .button:not(.card__icon-button) .button__text {
+    color: var(--text-color);
+    transition: color 1s ease;
+  }
+  .button:not(.card__icon-button):hover .button__text {
+    color: var(--bg-color);
+    transition: color 1s ease;
+  }
+
+  /* анимация - иконка кнопки */
+  .button:not(.card__icon-button) .icon > svg {
+    color: var(--text-color);
+    transition: color 1s ease;
+  }
+
+  .button:not(.card__icon-button):hover .icon > svg {
+    color: var(--bg-color);
+    transition: color 1s ease;
+  }
   
   /* анимация кнопки сердца */
   .card__icon-button.like-icon {
@@ -78,4 +112,6 @@
       transform: scale(1);
     }
   }
+
+
 }

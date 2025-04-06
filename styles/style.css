@@ -178,7 +178,7 @@
   color: var(--text-color);
 }
 
-/* стилизация кнопок */
+/* контент - стилизация кнопок */
 
 .button {
   background: initial;
@@ -188,11 +188,29 @@
   cursor: pointer;
   padding: 10.5px 35px;
   border: 2px solid var(--border-color);
+  position: relative;
+}
+
+.button:not(.card__icon-button):focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--border-color);
+}
+
+.button:not(.card__icon-button)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
 }
 
 .button__text {
   font-family: var(--font-accent);
   font-size: 14px;
+  position:relative;
+  z-index: 2;
 }
 
 .card__icon-button {
@@ -214,6 +232,9 @@
 .button .icon > svg {
   width: 100%;
   height: 100%;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
 }
 
 .card__icon-button > svg {
