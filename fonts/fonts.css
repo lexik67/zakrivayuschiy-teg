@@ -6,7 +6,7 @@
     format('woff2 supports variations')
     url(./Inter-Variable.woff2), format('woff2-variations');
   font-display: swap;
-  font-weight: 100 785;
+  font-weight: 400 785;
 }
 
 @font-face {
@@ -14,4 +14,10 @@
   src: url('./PressStart2P-Regular.woff') format('woff');
   font-weight: normal;
   font-display: swap;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-variation-settings: "wght" 785, "wght" 400;
+  }
 }

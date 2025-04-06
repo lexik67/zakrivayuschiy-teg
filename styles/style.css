@@ -69,6 +69,9 @@
   background: inherit;
   border: 0;
   cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  transition: none;
 }
 
 .theme-menu__list {
@@ -80,12 +83,6 @@
 
 .theme-menu__item {
   position: relative;
-}
-
-.theme-menu__button {
-  text-transform: uppercase;
-  position: relative;
-  transition: none;
 }
 
 .theme-menu__button::after {
@@ -229,11 +226,6 @@
   width: 39px;
   height: 36px;
   cursor: pointer;
-}
-
-.button .icon {
-  width: 28px;
-  height: 28px;
 }
 
 .button .icon > svg {

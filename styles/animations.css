@@ -117,11 +117,11 @@
     transition: fill 0.3s linear;
   }
 
-  .card__icon-button .like-icon .main-body  {
+  .card__icon-button .like-icon .main-body {
     transition: fill 0.03s linear;
   }
 
-  .card__icon-button:not(.is-liked):hover .like-icon .main-body  {
+  .card__icon-button:not(.is-liked):hover .like-icon .main-body {
     fill: var(--heart-icon-border);
     transition: fill 0.03s 0.05s linear;
   }
