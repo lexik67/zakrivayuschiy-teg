@@ -2,6 +2,8 @@
 :root {
   --font-accent: 'PressStart2P', Arial, sans-serif;
   --font-text: 'Inter-Variable', Arial, sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
   --border-color: #000000;
   --text-color: #000000;
   --bg-color: #FFFFFF;

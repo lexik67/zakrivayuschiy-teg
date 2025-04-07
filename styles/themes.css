@@ -6,6 +6,8 @@
 */
 
 :root.page.theme-dark {
+  --font-weight-bold: 785;
+  --font-weight-regular: 475;
   --border-color: #00CC14;
   --text-color: #00CC14;
   --bg-color: #000000;
@@ -18,6 +20,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not(.theme-dark) {
+    --font-weight-bold: 785;
+    --font-weight-regular: 475;
     --border-color: #00CC14;
     --text-color: #00CC14;
     --bg-color: #000000;
@@ -30,6 +34,8 @@
 }
 
 .page.theme-light {
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
   --border-color: #000000;
   --text-color: #000000;
   --bg-color: #FFFFFF;
@@ -42,6 +48,8 @@
 
 @media (prefers-color-scheme: light) {
   :root:not(.theme-light) {
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
     --border-color: #000000;
     --text-color: #000000;
     --bg-color: #FFFFFF;
@@ -51,20 +59,4 @@
     --heart-icon-bg: #ffffff;
     --bg-pattern: url(../svg/pattern-light.svg);
   }
-}
-
-.page.theme-light .card__title {
-  font-variation-settings: "wght" 785, "wght" 700;
-}
-
-.page.theme-light .card__paragraph {
-  font-variation-settings: "wght" 485, "wght" 400;
-}
-
-.page.theme-dark .card__title {
-  font-variation-settings: "wght" 785, "wght" 700;
-}
-
-.page.theme-dark .card__paragraph {
-  font-variation-settings: "wght" 485, "wght" 400;
 }

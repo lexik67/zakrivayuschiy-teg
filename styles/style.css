@@ -135,7 +135,7 @@ body {
 .card__title {
   font-family: var(--font-text);
   font-size: 18px;
-  font-weight: bold;
+  font-variation-settings: 'wght' var(--font-weight-bold);
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   padding-block-start: 5px;
@@ -151,6 +151,7 @@ body {
 
 .card__paragraph {
   font-family: var(--font-text);
+  font-variation-settings: 'wght' var(--font-weight-regular);
   font-size: 18px;
   line-height: 21px;
   word-wrap: break-word;
