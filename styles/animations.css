@@ -45,6 +45,16 @@
   }
 
   /* анимация кнопок like и сохранить на память и др */
+
+  .button {
+    transition: box-shadow 0.5s ease-in-out;
+  }
+
+  /* анимация тени при фокусе */
+  .button:not(.card__icon-button):focus-visible {
+    transition: box-shadow 0.5s ease-in-out;
+  }
+
   .button:not(.card__icon-button)::after {
     transform: scaleX(0);
     transform-origin: left center;
