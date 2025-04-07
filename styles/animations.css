@@ -29,7 +29,7 @@
   /* анимация возле активного пункта темы - влево вправо  */
   .theme-menu__item button:disabled::before {
     top: 50%;
-    animation: menu-marker 0.8s ease-in-out infinite;
+    animation: menu-marker 0.5s ease-in-out infinite;
   }
   
   @keyframes menu-marker {
@@ -58,13 +58,13 @@
   .button:not(.card__icon-button)::after {
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   
   .button:not(.card__icon-button):hover::after {
     transform: scaleX(1);
     transform-origin: left center;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 
   /* анимация - текст кнопки */
@@ -74,7 +74,6 @@
   }
   .button:not(.card__icon-button):hover .button__text {
     color: var(--bg-color);
-    transition: color 1s ease;
   }
 
   /* анимация - иконка кнопки */
@@ -85,7 +84,6 @@
 
   .button:not(.card__icon-button):hover .icon {
     color: var(--bg-color);
-    transition: color 1s ease;
   }
   
   /* анимация кнопки сердца */
@@ -116,53 +114,59 @@
     outline: none;
   }
 
-  /* hover */
+  /* по умолчанию */
 
-  .card__icon-button .like-icon .core {
-    transition: fill 0.03s linear;
+  .card__icon-button .like-icon .contour {
+    transition: fill 0.01s linear;
   }
 
-  .card__icon-button:not(.is-liked):hover .like-icon .core {
-    fill: var(--heart-icon-border);
-    transition: fill 0.3s linear;
+  .card__icon-button .like-icon .core {
+    transition: fill 0.3s 0.03s linear;
   }
 
   .card__icon-button .like-icon .main-body {
     transition: fill 0.03s linear;
   }
 
+  /* hover */
+
+  .card__icon-button:not(.is-liked):hover .like-icon .core {
+    fill: var(--heart-icon-border);
+    transition: fill 0.3s linear;
+  }
+
   .card__icon-button:not(.is-liked):hover .like-icon .main-body {
     fill: var(--heart-icon-border);
-    transition: fill 0.03s 0.05s linear;
+    transition: fill 0.3s 0.05s linear;
   }
 
   /* active */
 
   .card__icon-button:active .like-icon .core {
     fill: var(--heart-icon-fill);
-    transition: fill 0.03s linear;
+    transition: fill 0.3s linear;
   }
 
   .card__icon-button:active .like-icon .main-body {
     fill: var(--heart-icon-fill);
-    transition: fill 0.03s 0.05s linear;
+    transition: fill 0.3s 0.05s linear;
   }
 
   /* клик по иконке */
 
+  .like-icon.is-liked .contour {
+    fill: var(--heart-icon-fill);
+    transition: fill 0.3s 0.06s linear;
+  }
+
   .like-icon.is-liked .core {
     fill: var(--heart-icon-fill);
-    transition: fill 0.03s linear;
+    transition: fill 0.3s linear;
   }
 
   .like-icon.is-liked .main-body {
     fill: var(--heart-icon-fill);
-    transition: fill 0.03s linear;
-  }
-
-  .like-icon.is-liked .contour {
-    fill: var(--heart-icon-fill);
-    transition: fill 0.03s 0.06s linear;
+    transition: fill 0.3s 0.05s linear;
   }
 
   .like-icon.is-liked .heart {
