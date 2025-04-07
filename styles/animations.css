@@ -114,6 +114,11 @@
     outline: none;
   }
 
+  .card__icon-button:focus-visible .like-icon {
+    border: 2px solid var(--heart-icon-border);
+    transition: border 0.3s ease;
+  }
+
   /* по умолчанию */
 
   .card__icon-button .like-icon .contour {
