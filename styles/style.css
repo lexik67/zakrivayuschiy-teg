@@ -218,6 +218,13 @@ body {
   z-index: 2;
 }
 
+.card__like-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 130px;
+}
+
 .card__icon-button {
   border: 0;
   background-position: center;
