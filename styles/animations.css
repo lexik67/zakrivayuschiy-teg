@@ -53,6 +53,7 @@
   .button:not(.card__icon-button)::after {
     transform: scaleX(0);
     transform-origin: left center;
+    transition: transform 0.5s ease-in-out;
   }
   
   .button:not(.card__icon-button):hover::after {
