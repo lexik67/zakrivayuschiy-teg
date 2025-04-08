@@ -5,7 +5,20 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.page.theme-dark {
+:root .theme-light {
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --border-color: #000000;
+  --text-color: #000000;
+  --bg-color: #FFFFFF;
+  --like-color: #FF0000;
+  --heart-icon-border: #000000;
+  --heart-icon-fill: #FF0000;
+  --heart-icon-bg: #ffffff;
+  --bg-pattern: url(../svg/pattern-light.svg);
+}
+
+:root .theme-dark {
   --font-weight-bold: 785;
   --font-weight-regular: 475;
   --border-color: #00CC14;
@@ -19,7 +32,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not(.theme-dark) {
+  :root {
     --font-weight-bold: 785;
     --font-weight-regular: 475;
     --border-color: #00CC14;
@@ -30,33 +43,5 @@
     --heart-icon-fill: #00CC14;
     --heart-icon-bg: #000000;
     --bg-pattern: url(../svg/pattern-dark.svg);
-  }
-}
-
-.page.theme-light {
-  --font-weight-bold: 700;
-  --font-weight-regular: 400;
-  --border-color: #000000;
-  --text-color: #000000;
-  --bg-color: #FFFFFF;
-  --like-color: #FF0000;
-  --heart-icon-border: #000000;
-  --heart-icon-fill: #FF0000;
-  --heart-icon-bg: #ffffff;
-  --bg-pattern: url(../svg/pattern-light.svg);
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not(.theme-light) {
-    --font-weight-bold: 700;
-    --font-weight-regular: 400;
-    --border-color: #000000;
-    --text-color: #000000;
-    --bg-color: #FFFFFF;
-    --like-color: #FF0000;
-    --heart-icon-border: #000000;
-    --heart-icon-fill: #FF0000;
-    --heart-icon-bg: #ffffff;
-    --bg-pattern: url(../svg/pattern-light.svg);
   }
 }
