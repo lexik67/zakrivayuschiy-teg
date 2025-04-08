@@ -16,7 +16,7 @@
 @media (prefers-reduced-motion: no-preference) {
 
   .theme-menu__button {
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
   }
 
   /* анимация при фокусе пункта темы - появляется подчеркивание */
@@ -45,7 +45,7 @@
   /* анимация кнопок like и сохранить на память и др */
 
   .button {
-    transition: all 0.3s ease;
+    transition: box-shadow, transform 0.3s ease;
   }
 
   /* анимация тени при фокусе */
@@ -82,7 +82,7 @@
   /* анимация кнопки сердца */
 
   .card__icon-button .like-icon {
-    transition: all 0.3s ease;
+    transition: border, fill  0.3s ease;
   }
 
   /* исходное состояние */
