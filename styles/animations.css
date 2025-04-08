@@ -15,15 +15,13 @@
 
 @media (prefers-reduced-motion: no-preference) {
 
+  .theme-menu__button {
+    transition: all 0.3s ease;
+  }
+
   /* анимация при фокусе пункта темы - появляется подчеркивание */
   .theme-menu__button:focus-visible::after {
     transform-origin: left center;
-    transition: transform 0.3s ease;
-  }
-  
-  /* анимация при наведении на пункт темы - плавно меняется прозрачность */
-  .theme-menu__button:hover {
-    transition: opacity 0.3s ease;
   }
   
   /* анимация возле активного пункта темы - влево вправо  */
@@ -37,7 +35,7 @@
       transform: translateY(-50%) translateX(0);
     }
     50% {
-      transform: translateY(-50%) translateX(0.25rem);
+      transform: translateY(-50%) translateX(4px);
     }
     100% {
       transform: translateY(-50%) translateX(0);
@@ -47,24 +45,18 @@
   /* анимация кнопок like и сохранить на память и др */
 
   .button {
-    transition: box-shadow 0.5s ease-in-out;
+    transition: all 0.3s ease;
   }
 
   /* анимация тени при фокусе */
-  .button:not(.card__icon-button):focus-visible {
-    transition: box-shadow 0.5s ease-in-out;
-  }
 
   .button:not(.card__icon-button)::after {
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.5s ease-in-out;
   }
   
   .button:not(.card__icon-button):hover::after {
     transform: scaleX(1);
-    transform-origin: left center;
-    transition: transform 0.5s ease-in-out;
   }
 
   /* анимация - текст кнопки */
@@ -87,6 +79,10 @@
   }
   
   /* анимация кнопки сердца */
+
+  .card__icon-button .like-icon {
+    transition: all 0.3s ease;
+  }
 
   /* исходное состояние */
 
@@ -116,13 +112,12 @@
 
   .card__icon-button:focus-visible .like-icon {
     border: 2px solid var(--heart-icon-border);
-    transition: border 0.3s ease;
   }
 
   /* по умолчанию */
 
   .card__icon-button .like-icon .contour {
-    transition: fill 0.01s linear;
+    transition: fill 0.1s linear;
   }
 
   .card__icon-button .like-icon .core {
@@ -176,7 +171,7 @@
 
   .like-icon.is-liked .heart {
     transform-origin: center;
-    animation: heart-beat 0.3s 0.1s ease-in-out;
+    animation: heart-beat 0.3s 0.1s ease-in;
   }
 
   @keyframes heart-beat {
@@ -195,7 +190,7 @@
 
   .like-icon.is-liked .sparks {
     fill: var(--heart-icon-fill);
-    animation: heart-sparks 0.3s 0.3s ease-in-out;
+    animation: heart-sparks 0.3s 0.3s ease-in;
   }
 
   @keyframes heart-sparks {
@@ -209,7 +204,7 @@
   }
 
   /* снятие активности */
-  .like-icon {
+  .like-icon .contour {
     transition: fill 0.1s linear;
   }
 }
